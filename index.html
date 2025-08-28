@@ -1,71 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio Silvanus Alvan</title>
-    <style>
-                    .header{
-                        font-size: 30px;
-                        text-align: center;
-                    }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Silvanus Alvan</title>
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
 
-                    .Tentang-saya{
-                        font-size: 30px;
-                        color: blue;
-                    }
-    </style>
+    header {
+      background: linear-gradient(135deg, #007bff, #00c6ff);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    header img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    nav {
+      background: #333;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #00c6ff;
+    }
+
+    section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: #fff;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 10px;
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+
+    .contact a:hover {
+      background: #00c6ff;
+    }
+  </style>
 </head>
 <body>
-    <header class="header">Portofolio Silvanus Alvan</header>
-                <section id="Pap">Silvanus Alvan 
-                    <h2 class="Tentang-saya">tentang saya</h2>
-                    <img src="D:\UPH\Semester 23-24\Semester 5\PortofolioGithub\Portofolio_S_Alvan\images\jigemoy.png">
-                </section>
-                <section id="Ringkasan"> Ringkasan
-                    <p>Saya adalah mahasiswa UPH semester 5 pada bidang Informatika</p>
-                </section>
-                <section id="Pendidikan">
-                    <h2>Pendidikan</h2>
-                    <ul>
-                        <li>
-                            Univ UPH
-                        </li>
-                    </ul>
-                </section>
-                <section id="Skills">Skills
-                    <ul>
-                        <li>
-                            masak martabak
-                        </li>
-                        <li>
-                            breakdance
-                        </li>
-                        <li>
-                            Touch bisma inappropriately
-                        </li>
-                    </ul>
-                </section>
-                <section id="Pengalaman-Kerja">
-                    Pengalaman Kerja
-                    <p>
-                       10 Tahun di perusahaan bisma
-                    </p>
-                </section>
+  <!-- Hero Section -->
+  <header>
+    <!-- Foto Profil -->
+    <img src="images/jigemoy.png" alt="Foto Silvanus Alvan">
+    <h1>Silvanus Alvan</h1>
+    <p>Mahasiswa Informatika | Game Developer | Data Enthusiast</p>
+  </header>
 
-                <section id="Project">
-                    <h2 class="Project">Project</h2>
-                    <ul>
-                        <li>
-                            Game 1 gemoy gemoy gemoy
-                        </li>
-                        <li>
-                            Game 2 yuji gemoy
-                        </li>
-                        <li>
-                            ChatApp Pak Benny
-                        </li>
-                    </ul>
-                </section>
+  <!-- Navigation -->
+  <nav>
+    <a href="#tentang">Tentang Saya</a>
+    <a href="#skills">Skills</a>
+    <a href="#pengalaman">Pengalaman</a>
+    <a href="#projects">Projects</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
+
+  <!-- Tentang Saya -->
+  <section id="tentang">
+    <h2>Tentang Saya</h2>
+    <p>
+      Halo! Saya <strong>Silvanus Alvan</strong>, mahasiswa semester 5 Informatika di UPH.
+      Saya memiliki minat dalam <em>pengembangan game</em>, <em>data science</em>, dan 
+      <em>web development</em>. Saya senang mengeksplorasi teknologi baru dan
+      menciptakan solusi kreatif.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div>💻 Web Development</div>
+      <div>🎮 Game Development</div>
+      <div>📊 Data Science</div>
+      <div>🕹️ Simulation & AI</div>
+    </div>
+  </section>
+
+  <!-- Pengalaman -->
+  <section id="pengalaman">
+    <h2>Pengalaman</h2>
+    <ul>
+      <li>Internship di perusahaan software lokal - Web & Database Developer</li>
+      <li>Proyek penelitian: Machine Learning untuk prediksi income & churn</li>
+      <li>Asisten Lab Pemrograman - membantu mahasiswa memahami OOP & algoritma</li>
+    </ul>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div>🎮 Game Simulator - Paths of Valor</div>
+      <div>📱 ChatApp - Aplikasi chat real-time</div>
+      <div>📊 Data Science - Analisis Titanic & Adult Dataset</div>
+      <div>🤖 AI Pathfinding - Dijkstra & Lane Detection</div>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="contact">
+    <h2>Kontak</h2>
+    <p>Hubungi saya melalui:</p>
+    <a href="mailto:silvanus.alvan@example.com">Email</a>
+    <a href="https://github.com/">GitHub</a>
+    <a href="https://linkedin.com/">LinkedIn</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Silvanus Alvan. All rights reserved.</p>
+  </footer>
 </body>
 </html>
