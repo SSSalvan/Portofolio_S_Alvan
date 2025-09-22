@@ -1,60 +1,210 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: #0F172A;
-    color: #E2E8F0;
+  font-family: 'Inter', sans-serif;
+  background-color: #0f0a24; /* dark navy background */
+  color: #e2e8f0;
+  line-height: 1.6;
 }
 
-header h1 {
-    font-weight: 800;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 2rem;
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5%;
 }
 
-.box {
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background-color: #1e293b; /* slate-800 */
-    border-radius: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fde047; /* yellow accent */
 }
 
-.box h2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #fde047; /* yellow-400 */
-    margin-bottom: 1rem;
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
 }
 
-.box h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0.5rem;
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: color 0.3s;
 }
 
-.box p, .box li {
-    color: #94a3b8; /* slate-400 */
-    line-height: 1.6;
+.nav-links a:hover {
+  color: #fde047;
 }
 
-button {
-    padding: 0.75rem 1.5rem;
-    background-color: #fde047;
-    color: #0f172a;
-    font-weight: 700;
-    border-radius: 9999px;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 10%;
+  gap: 2rem;
 }
 
-button:hover {
-    background-color: #facc15; /* yellow-500 */
+.hero-text {
+  max-width: 50%;
 }
 
-footer {
-    margin-top: 4rem;
-    text-align: center;
-    color: #64748b; /* slate-500 */
-    font-size: 0.875rem;
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-text .subtitle {
+  font-size: 1.2rem;
+  color: #94a3b8;
+  margin-bottom: 2rem;
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 6px solid #fde047;
+  object-fit: cover;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* Button */
+.btn {
+  background-color: #fde047;
+  color: #0f172a;
+  font-weight: bold;
+  padding: 0.8rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #facc15;
+}
+
+/* Services */
+.services {
+  padding: 4rem 10%;
+  background-color: #1e1b36;
+  border-radius: 1.5rem;
+  margin: 3rem auto;
+}
+
+.services h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fde047;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #2d2a4a;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+.card h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  color: #94a3b8;
+}
+
+/* Portfolio */
+.portfolio {
+  padding: 4rem 10%;
+}
+
+.portfolio h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fde047;
+  margin-bottom: 2rem;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.work img {
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  transition: transform 0.3s;
+}
+
+.work img:hover {
+  transform: scale(1.05);
+}
+
+/* Call To Action */
+.cta {
+  background-color: #fde047;
+  color: #0f172a;
+  text-align: center;
+  padding: 3rem;
+  border-radius: 1.5rem;
+  margin: 4rem 10%;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 2rem;
+}
+
+/* About Section Layout */
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background-color: #1e1b36; /* Darker container background */
+  padding: 5%;
+  margin: 3rem 10%; /* Adds space around the container */
+  border-radius: 1.5rem; /* Rounded corners for the container */
+}
+
+.about-text {
+  max-width: 50%;
+}
+
+/* Profile Photo Style */
+.profile-photo {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%; /* This is what makes the image a circle */
+  border: 6px solid #fde047; /* The yellow border */
+  object-fit: cover; /* Prevents the image from stretching */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* Optional: adds a nice shadow */
 }
