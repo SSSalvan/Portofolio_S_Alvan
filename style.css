@@ -1,29 +1,54 @@
-/* General reset */
+/* === GENERAL & TYPOGRAPHY === */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f0a24; /* dark navy background */
+  background-color: #0f0a24;
   color: #e2e8f0;
   line-height: 1.6;
 }
 
-/* Navbar */
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fde047;
+  margin-bottom: 3rem;
+}
+
+/* === HEADER & NAVIGATION === */
+.site-header {
+  background-color: rgba(15, 10, 36, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 1rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid #1e1b36;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  color: #fde047; /* yellow accent */
+  color: #fde047;
+  text-decoration: none;
 }
 
 .nav-links {
@@ -36,50 +61,55 @@ body {
   text-decoration: none;
   color: #e2e8f0;
   font-weight: 500;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
   color: #fde047;
 }
 
-/* Hero Section */
+/* === HERO SECTION === */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5% 10%;
-  gap: 2rem;
+  padding: 5rem 5%;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .hero-text {
-  max-width: 50%;
+  max-width: 60%;
 }
 
-.hero-text h1 {
+.hero-text .title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #fff;
   margin-bottom: 1rem;
 }
 
-.hero-text .subtitle {
-  font-size: 1.2rem;
+.hero-text .desc {
+  font-size: 1.1rem;
   color: #94a3b8;
   margin-bottom: 2rem;
+  max-width: 500px;
 }
 
-.hero-image img {
+.hero-image .profile-photo {
   width: 280px;
   height: 280px;
   border-radius: 50%;
   border: 6px solid #fde047;
   object-fit: cover;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 30px rgba(253, 224, 71, 0.2);
+  transform: rotate(90deg); /* This will rotate the image to be upright */
 }
 
-/* Button */
+/* === BUTTON === */
 .btn {
+  display: inline-block;
   background-color: #fde047;
   color: #0f172a;
   font-weight: bold;
@@ -87,124 +117,182 @@ body {
   border-radius: 999px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn:hover {
   background-color: #facc15;
+  transform: translateY(-3px);
 }
 
-/* Services */
+/* === SERVICES SECTION === */
 .services {
-  padding: 4rem 10%;
-  background-color: #1e1b36;
-  border-radius: 1.5rem;
-  margin: 3rem auto;
-}
-
-.services h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #fde047;
-  margin-bottom: 2rem;
+  padding: 5rem 5%;
+  background-color: #130c2c;
 }
 
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
-  background-color: #2d2a4a;
+  background-color: #1e1b36;
   padding: 2rem;
   border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
 .card h3 {
   color: #fff;
   margin-bottom: 1rem;
+  font-size: 1.25rem;
 }
 
 .card p {
   color: #94a3b8;
 }
 
-/* Portfolio */
-.portfolio {
-  padding: 4rem 10%;
+/* === INFO GRID (EDUCATION, SKILLS, ETC) === */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.portfolio h2 {
-  font-size: 2rem;
-  font-weight: 700;
+.info-card {
+  background-color: #1e1b36;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.info-card .section-title {
+  font-size: 1.5rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.info-card ul {
+  list-style-position: inside;
+  padding-left: 0;
+  color: #94a3b8;
+}
+
+.info-card li {
+  margin-bottom: 0.5rem;
+}
+
+.info-card h3 {
+  color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.info-card a {
+  color: #94a3b8;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.info-card a:hover {
   color: #fde047;
-  margin-bottom: 2rem;
+}
+
+/* === PORTFOLIO SECTION === */
+.portfolio {
+  padding: 5rem 5%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
 .work img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
-  transition: transform 0.3s;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work img:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
 }
 
-/* Call To Action */
+/* === CALL TO ACTION (CTA) SECTION === */
 .cta {
-  background-color: #fde047;
-  color: #0f172a;
+  background-color: #1e1b36;
   text-align: center;
-  padding: 3rem;
+  padding: 4rem 2rem;
   border-radius: 1.5rem;
-  margin: 4rem 10%;
+  margin: 5rem auto;
+  max-width: 800px;
 }
 
 .cta h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
 }
 
-/* Footer */
-.footer {
+.cta p {
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+/* === FOOTER === */
+.site-footer {
   text-align: center;
   color: #64748b;
   font-size: 0.9rem;
   padding: 2rem;
+  border-top: 1px solid #1e1b36;
+  margin-top: 2rem;
 }
 
-/* About Section Layout */
-.about {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  background-color: #1e1b36; /* Darker container background */
-  padding: 5%;
-  margin: 3rem 10%; /* Adds space around the container */
-  border-radius: 1.5rem; /* Rounded corners for the container */
-}
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Simple hiding for mobile. A hamburger menu would require JavaScript. */
+  }
 
-.about-text {
-  max-width: 50%;
-}
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 3rem 5%;
+  }
 
-/* Profile Photo Style */
-.profile-photo {
-  width: 280px;
-  height: 280px;
-  border-radius: 50%; /* This is what makes the image a circle */
-  border: 6px solid #fde047; /* The yellow border */
-  object-fit: cover; /* Prevents the image from stretching */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.4); /* Optional: adds a nice shadow */
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-text .title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
 }
