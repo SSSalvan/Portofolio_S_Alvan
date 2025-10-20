@@ -8,8 +8,10 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f0a24;
-  color: #e2e8f0;
+  /* Slightly deeper background for sophistication */
+  background-color: #0d0c1d;
+  /* Lighter text for better contrast */
+  color: #cbd5e1;
   line-height: 1.6;
 }
 
@@ -19,21 +21,26 @@ h1, h2, h3 {
 
 .section-title {
   text-align: center;
-  font-size: 2.25rem;
+  /* Slightly larger for impact */
+  font-size: 2.5rem;
   font-weight: 700;
+  /* Original accent color */
   color: #fde047;
   margin-bottom: 3rem;
 }
 
 /* === HEADER & NAVIGATION === */
 .site-header {
-  background-color: rgba(15, 10, 36, 0.85);
+  /* Less transparent for better visual presence */
+  background-color: rgba(13, 12, 29, 0.95);
   backdrop-filter: blur(10px);
   padding: 1rem 5%;
   position: sticky;
   top: 0;
   z-index: 100;
   border-bottom: 1px solid #1e1b36;
+  /* Added a distinct shadow */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .navbar {
@@ -47,6 +54,7 @@ h1, h2, h3 {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  /* Original accent color */
   color: #fde047;
   text-decoration: none;
 }
@@ -65,6 +73,7 @@ h1, h2, h3 {
 }
 
 .nav-links a:hover {
+  /* Original accent color */
   color: #fde047;
 }
 
@@ -84,7 +93,8 @@ h1, h2, h3 {
 }
 
 .hero-text .title {
-  font-size: 3rem;
+  /* Larger, more impactful title */
+  font-size: 3.5rem;
   font-weight: 700;
   color: #fff;
   margin-bottom: 1rem;
@@ -101,34 +111,42 @@ h1, h2, h3 {
   width: 280px;
   height: 280px;
   border-radius: 50%;
+  /* Original accent color */
   border: 6px solid #fde047;
   object-fit: cover;
-  box-shadow: 0 8px 30px rgba(253, 224, 71, 0.2);
-  transform: rotate(90deg); /* This will rotate the image to be upright */
+  /* Subtle glow shadow using the accent color */
+  box-shadow: 0 8px 30px rgba(253, 224, 71, 0.3);
+  /* KEEPING the rotation as requested */
+  transform: rotate(90deg);
 }
 
 /* === BUTTON === */
 .btn {
   display: inline-block;
+  /* Original accent color */
   background-color: #fde047;
   color: #0f172a;
-  font-weight: bold;
-  padding: 0.8rem 1.8rem;
+  font-weight: 700; /* Bolder text */
+  padding: 0.8rem 2rem;
   border-radius: 999px;
   border: none;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn:hover {
+  /* Original hover color */
   background-color: #facc15;
   transform: translateY(-3px);
+  /* Added a distinct shadow on hover */
+  box-shadow: 0 6px 15px rgba(253, 224, 71, 0.4);
 }
 
 /* === SERVICES SECTION === */
 .services {
   padding: 5rem 5%;
+  /* Slightly darker background for separation */
   background-color: #130c2c;
 }
 
@@ -141,7 +159,9 @@ h1, h2, h3 {
 }
 
 .card {
-  background-color: #1e1b36;
+  /* Subtle background change and border for definition */
+  background-color: #1a172a;
+  border: 1px solid #332d4a;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -149,18 +169,20 @@ h1, h2, h3 {
 }
 
 .card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  /* Softer lift and a subtle glow */
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.7), 0 0 15px #fde04740;
 }
 
 .card h3 {
-  color: #fff;
+  /* Accent color for titles */
+  color: #fde047;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 
 .card p {
-  color: #94a3b8;
+  color: #b0b0bb;
 }
 
 /* === INFO GRID (EDUCATION, SKILLS, ETC) === */
@@ -174,7 +196,9 @@ h1, h2, h3 {
 }
 
 .info-card {
-  background-color: #1e1b36;
+  /* Consistent card styling */
+  background-color: #1a172a;
+  border: 1px solid #332d4a;
   padding: 2rem;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
@@ -184,24 +208,62 @@ h1, h2, h3 {
   font-size: 1.5rem;
   text-align: left;
   margin-bottom: 1.5rem;
+  /* Accent color */
+  color: #fde047;
 }
 
 .info-card ul {
-  list-style-position: inside;
+  /* Resetting default list style for custom icons */
+  list-style: none;
   padding-left: 0;
-  color: #94a3b8;
+  color: #cbd5e1;
 }
 
 .info-card li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
+  /* Default padding for icon space */
+  padding-left: 1.8rem;
+  position: relative;
 }
 
-.info-card h3 {
+/* Base style for all list item icons */
+.info-card li::before {
+  font-family: "Font Awesome 6 Brands"; /* Default to brands */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fde047;
+  font-weight: 900;
+  content: ''; /* Set to empty by default */
+}
+
+/* PYTHON Logo */
+.info-card li[data-icon="python"]::before {
+  content: '\f3e2'; /* Font Awesome Python icon code */
+  font-size: 1.1rem;
+}
+
+/* SQL/Database Logo (used for KineticaSQL) */
+.info-card li[data-icon="sql"]::before {
+  font-family: "Font Awesome 6 Free";
+  content: '\f1c0'; /* Font Awesome database icon code */
+  font-size: 1.1rem;
+}
+
+/* Hide marker for items with data-icon="none" (Education, Projects, some Skills) */
+.info-card li[data-icon="none"] {
+    padding-left: 0; /* Remove padding for the icon */
+}
+.info-card li[data-icon="none"]::before {
+    content: none; /* Explicitly ensure no content */
+}
+
+.info-card h3, .info-card h4 {
   color: #fff;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
 }
 
 .info-card a {
@@ -211,6 +273,7 @@ h1, h2, h3 {
 }
 
 .info-card a:hover {
+  /* Accent color */
   color: #fde047;
 }
 
@@ -233,39 +296,45 @@ h1, h2, h3 {
   object-fit: cover;
   border-radius: 1rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
 }
 
 .work img:hover {
-  transform: scale(1.05);
+  /* Subtle zoom and added border highlight */
+  transform: scale(1.02);
   box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+  /* Border highlight on hover */
+  border: 3px solid #fde047;
 }
 
 /* === CALL TO ACTION (CTA) SECTION === */
 .cta {
-  background-color: #1e1b36;
+  background-color: #1a172a; /* Consistent with other cards */
+  /* Added a standout border */
+  border: 1px solid #fde047;
   text-align: center;
   padding: 4rem 2rem;
   border-radius: 1.5rem;
   margin: 5rem auto;
   max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
 .cta h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #fff;
     margin-bottom: 1rem;
 }
 
 .cta p {
-    color: #94a3b8;
+    color: #cbd5e1;
     margin-bottom: 2rem;
 }
 
 /* === FOOTER === */
 .site-footer {
   text-align: center;
-  color: #64748b;
+  color: #475569;
   font-size: 0.9rem;
   padding: 2rem;
   border-top: 1px solid #1e1b36;
@@ -275,7 +344,7 @@ h1, h2, h3 {
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
   .nav-links {
-    display: none; /* Simple hiding for mobile. A hamburger menu would require JavaScript. */
+    display: none;
   }
 
   .hero {
@@ -293,6 +362,6 @@ h1, h2, h3 {
   }
 
   .section-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
